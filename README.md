@@ -25,7 +25,7 @@
 
 # パイプラインコンフィグ修正箇所
 3行目：num_classes: 90 → 1<br>
-134行目：batch_size: 128 → 8<br>
+134行目：batch_size: 128 → 16<br>
 161行目：fine_tune_checkpoint: "PATH_TO_BE_CONFIGURED" → "/content/models/research/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained_model/efficientdet_d0_coco17_tpu-32/checkpoint/ckpt-0"
 167行目：fine_tune_checkpoint_type: "classification" → "detection"<br>
 168行目：use_bfloat16: true → false<br>
