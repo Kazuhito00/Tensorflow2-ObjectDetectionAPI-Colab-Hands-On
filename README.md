@@ -3,7 +3,8 @@
 
 # Directory
 <pre>
-│  
+│ [Colaboratory]Tensorflow2_ObjectDetectionAPI_Colab_Hands_On.ipynb
+|
 ├─01_train_data─┬─000000.jpg
 │               │     :
 │               └─000049.jpg
@@ -21,8 +22,10 @@
 └─04_test_data─┬─000050.jpg
                │     :
                └─000099.jpg
+
 </pre>
 
+<!--
 # パイプラインコンフィグ修正箇所
 3行目：num_classes: 90 → 1<br>
 134行目：batch_size: 128 → 16<br>
@@ -33,8 +36,10 @@
 174行目：input_path: "PATH_TO_BE_CONFIGURED/train2017-?????-of-00256.tfrecord" → "/content/models/research/train_data/??????.tfrecord"<br>
 185行目：label_map_path: "PATH_TO_BE_CONFIGURED/label_map.txt" → "/content/models/research/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/02_tfrecord/tf_label_map.pbtxt"<br>
 189行目：input_path: "PATH_TO_BE_CONFIGURED/val2017-?????-of-00032.tfrecord" → "/content/models/research/val_data/??????.tfrecord"
+-->
 
 <pre>
+
 W0921 13:29:32.965700 140050120722176 optimizer_v2.py:1275] Gradients do not exist for variables ['top_bn/gamma:0', 'top_bn/beta:0'] when minimizing the loss.
 Traceback (most recent call last):
   File "object_detection/model_main_tf2.py", line 113, in <module>
