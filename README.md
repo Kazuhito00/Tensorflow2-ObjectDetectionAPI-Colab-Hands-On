@@ -1,5 +1,19 @@
 # Tensorflow2-ObjectDetectionAPI-Colab-Hands-On
 
+![2020-09-19 (3)](https://user-images.githubusercontent.com/37477845/94046873-3629e780-fe0c-11ea-9e0f-d060bad6f4fc.png)
+![2020-09-19 (4)](https://user-images.githubusercontent.com/37477845/94046880-388c4180-fe0c-11ea-8d12-4cf2ba077016.png)
+![2020-09-19 (6)](https://user-images.githubusercontent.com/37477845/94046885-39bd6e80-fe0c-11ea-87cc-f0f7918aa62f.png)
+![2020-09-19 (7)](https://user-images.githubusercontent.com/37477845/94046887-3a560500-fe0c-11ea-8aff-d5125609da72.png)
+![2020-09-19 (8)](https://user-images.githubusercontent.com/37477845/94046890-3b873200-fe0c-11ea-9729-7fd81a4d20b4.png)
+![2020-09-19 (9)](https://user-images.githubusercontent.com/37477845/94046892-3cb85f00-fe0c-11ea-984e-009c68560b70.png)
+![2020-09-19 (10)](https://user-images.githubusercontent.com/37477845/94046894-3de98c00-fe0c-11ea-8de8-a08d40deb1c5.png)
+![2020-09-19 (11)](https://user-images.githubusercontent.com/37477845/94046897-3f1ab900-fe0c-11ea-9527-18ae7e963a3f.png)
+![2020-09-19 (12)](https://user-images.githubusercontent.com/37477845/94046905-404be600-fe0c-11ea-86a5-bb229cd2024e.png)
+![2020-09-21 (0)](https://user-images.githubusercontent.com/37477845/94046916-42ae4000-fe0c-11ea-8c08-a9cc3f4df21f.png)
+![2020-09-21 (1)](https://user-images.githubusercontent.com/37477845/94046922-46da5d80-fe0c-11ea-9566-e917f2c38eb9.png)
+![2020-09-19 (15)](https://user-images.githubusercontent.com/37477845/94046907-40e47c80-fe0c-11ea-8f8e-4a6e9361548b.png)
+![2020-09-19 (16)](https://user-images.githubusercontent.com/37477845/94046913-4215a980-fe0c-11ea-8100-9bd71ae96a4b.png)
+
 
 # Directory
 <pre>
