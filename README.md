@@ -1,5 +1,6 @@
 # Tensorflow2-ObjectDetectionAPI-Colab-Hands-On
 Tensorflow2 Object Detection APIのハンズオン用資料です。<br>
+アノテーションをローカルPCで実施し、学習～推論はColaboratory上で実施します。<br><br>
 以下の内容を含みます。<br>
 * 学習用データセット ※アノテーション未実施
 * テスト用データセット
@@ -57,6 +58,11 @@ Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確�
 1. パイプラインコンフィグ修正
 1. Colaboratory：モデル訓練(約25分)
 1. Colaboratory：推論
+
+# Preparations
+事前準備として以下が必要です。
+* [VoTT](https://github.com/microsoft/VoTT)のインストール
+* Googleアカウント(Google Colaboratory、Googleドライブで使用)
 
 # XXXXXXXX
 
