@@ -8,7 +8,7 @@ VoTTでのアノテーションをローカルPCで実施し、学習～推論�
 * Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確認)
 
 <details>
-<summary>Directory</summary>
+<summary>ディレクトリ構成</summary>
 
 <pre>
 │ [Colaboratory]Tensorflow2_ObjectDetectionAPI_Colab_Hands_On.ipynb
