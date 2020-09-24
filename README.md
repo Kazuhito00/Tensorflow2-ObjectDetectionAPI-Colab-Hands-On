@@ -1,4 +1,12 @@
 # Tensorflow2-ObjectDetectionAPI-Colab-Hands-On
+Tensorflow2 Object Detection APIのハンズオン用資料です。<br>
+以下の内容を含みます。<br>
+* 学習用データセット ※アノテーション未実施
+* テスト用データセット
+* ファインチューニング用モデル(EffientDet D0)
+* Colaboratory用スクリプト(環境設定、モデル学習、推論結果確認)
+
+# XXXXXXXX
 
 <details>
 <summary>VoTT</summary>
