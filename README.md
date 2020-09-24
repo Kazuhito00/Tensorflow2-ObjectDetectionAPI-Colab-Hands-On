@@ -6,6 +6,34 @@ Tensorflow2 Object Detection APIのハンズオン用資料です。<br>
 * ファインチューニング用モデル(EffientDet D0)
 * Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確認)
 
+<details>
+<summary>Directory</summary>
+
+<pre>
+│ [Colaboratory]Tensorflow2_ObjectDetectionAPI_Colab_Hands_On.ipynb
+|
+├─01_train_data─┬─000000.jpg
+│               │     :
+│               └─000049.jpg
+│      
+├─02_tfrecord
+│      
+├─03_pretrained_model─efficientdet_d0_coco17_tpu-32─┬─pipeline.config
+│                                                   ├─checkpoint──┬─checkpoint
+│                                                   │             ├─ckpt-0.data-00000-of-00001
+│                                                   │             └─ckpt-0.index
+│                                                   └─saved_model─┬─saved_model.pb
+│                                                                 └─variables─┬─variables.data-00000-of-00001
+│                                                                             └─variables.index
+│
+└─04_test_data─┬─000050.jpg
+               │     :
+               └─000099.jpg
+
+</pre>
+</details>
+
+
 # Overview
 2時間程度のボリュームの想定です。
 1. VoTT：アノテーション(約30～60分)
@@ -42,30 +70,6 @@ Tensorflow2 Object Detection APIのハンズオン用資料です。<br>
 ![2020-09-19 (16)](https://user-images.githubusercontent.com/37477845/94047601-44c4ce80-fe0d-11ea-89fc-92b86e4ba3b8.png)
 ![2020-09-19 (17)](https://user-images.githubusercontent.com/37477845/94047603-44c4ce80-fe0d-11ea-8c0d-3ebc2e740560.png)
 </details>
-
-# Directory
-<pre>
-│ [Colaboratory]Tensorflow2_ObjectDetectionAPI_Colab_Hands_On.ipynb
-|
-├─01_train_data─┬─000000.jpg
-│               │     :
-│               └─000049.jpg
-│      
-├─02_tfrecord
-│      
-├─03_pretrained_model─efficientdet_d0_coco17_tpu-32─┬─pipeline.config
-│                                                   ├─checkpoint──┬─checkpoint
-│                                                   │             ├─ckpt-0.data-00000-of-00001
-│                                                   │             └─ckpt-0.index
-│                                                   └─saved_model─┬─saved_model.pb
-│                                                                 └─variables─┬─variables.data-00000-of-00001
-│                                                                             └─variables.index
-│
-└─04_test_data─┬─000050.jpg
-               │     :
-               └─000099.jpg
-
-</pre>
 
 <!--
 # パイプラインコンフィグ修正箇所
