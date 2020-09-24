@@ -31,6 +31,22 @@ Tensorflow2 Object Detection APIのハンズオン用資料です。<br>
                └─000099.jpg
 
 </pre>
+
+#### [Colaboratory]Tensorflow2_ObjectDetectionAPI_Colab_Hands_On.ipynb
+Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確認)
+
+#### 01_train_data
+学習用データセット ※アノテーション未実施
+
+#### 02_tfrecord
+アノテーション実施済みTFRecord格納先
+
+#### 03_pretrained_mode
+ファインチューニング用モデル(EffientDet D0)
+
+#### 04_test_data
+テスト用データセット
+
 </details>
 
 
