@@ -4,7 +4,23 @@ Tensorflow2 Object Detection APIのハンズオン用資料です。<br>
 * 学習用データセット ※アノテーション未実施
 * テスト用データセット
 * ファインチューニング用モデル(EffientDet D0)
-* Colaboratory用スクリプト(環境設定、モデル学習、推論結果確認)
+* Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確認)
+
+# Overview
+2時間程度のボリュームの想定です。
+1. VoTT：アノテーション(約30～60分)
+1. Colaboratory：Object Detection API設定
+1. パイプラインコンフィグ修正
+1. Colaboratory：モデル訓練(約25分)
+1. Colaboratory：推論
+
+# XXXXXXXX
+
+# XXXXXXXX
+
+# XXXXXXXX
+
+# XXXXXXXX
 
 # XXXXXXXX
 
