@@ -1,6 +1,6 @@
 # Tensorflow2-ObjectDetectionAPI-Colab-Hands-On
 Tensorflow2 Object Detection APIのハンズオン用資料です。<br>
-アノテーションをローカルPCで実施し、学習～推論はColaboratory上で実施します。<br><br>
+VoTTでのアノテーションをローカルPCで実施し、学習～推論はColaboratory上で実施します。<br><br>
 以下の内容を含みます。<br>
 * 学習用データセット ※アノテーション未実施
 * テスト用データセット
@@ -64,15 +64,7 @@ Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確�
 * [VoTT](https://github.com/microsoft/VoTT)のインストール
 * Googleアカウント(Google Colaboratory、Googleドライブで使用)
 
-# XXXXXXXX
-
-# XXXXXXXX
-
-# XXXXXXXX
-
-# XXXXXXXX
-
-# XXXXXXXX
+# 1. VoTT：アノテーション
 
 <details>
 <summary>VoTT</summary>
@@ -91,20 +83,7 @@ Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確�
 ![2020-09-19 (15)](https://user-images.githubusercontent.com/37477845/94047598-442c3800-fe0d-11ea-9285-d72713520a65.png)
 ![2020-09-19 (16)](https://user-images.githubusercontent.com/37477845/94047601-44c4ce80-fe0d-11ea-89fc-92b86e4ba3b8.png)
 ![2020-09-19 (17)](https://user-images.githubusercontent.com/37477845/94047603-44c4ce80-fe0d-11ea-8c0d-3ebc2e740560.png)
-</details>
 
-<!--
-# パイプラインコンフィグ修正箇所
-3行目：num_classes: 90 → 1<br>
-134行目：batch_size: 128 → 16<br>
-161行目：fine_tune_checkpoint: "PATH_TO_BE_CONFIGURED" → "/content/models/research/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained_model/efficientdet_d0_coco17_tpu-32/checkpoint/ckpt-0"
-167行目：fine_tune_checkpoint_type: "classification" → "detection"<br>
-168行目：use_bfloat16: true → false<br>
-172行目：label_map_path: "PATH_TO_BE_CONFIGURED/label_map.txt" → "/content/models/research/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/02_tfrecord/tf_label_map.pbtxt"<br>
-174行目：input_path: "PATH_TO_BE_CONFIGURED/train2017-?????-of-00256.tfrecord" → "/content/models/research/train_data/??????.tfrecord"<br>
-185行目：label_map_path: "PATH_TO_BE_CONFIGURED/label_map.txt" → "/content/models/research/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/02_tfrecord/tf_label_map.pbtxt"<br>
-189行目：input_path: "PATH_TO_BE_CONFIGURED/val2017-?????-of-00032.tfrecord" → "/content/models/research/val_data/??????.tfrecord"
--->
 
 <pre>
 
@@ -149,6 +128,28 @@ tensorflow.python.framework.errors_impl.InvalidArgumentError: 2 root error(s) fo
 	 [[RemoteCall]]
 	 [[IteratorGetNext]]
 </pre>
+</details>
+
+# 2. Colaboratory：Object Detection API設定
+
+# 3. パイプラインコンフィグ修正
+
+# 4. Colaboratory：モデル訓練
+
+# 5. Colaboratory：推論
+
+<!--
+# パイプラインコンフィグ修正箇所
+3行目：num_classes: 90 → 1<br>
+134行目：batch_size: 128 → 16<br>
+161行目：fine_tune_checkpoint: "PATH_TO_BE_CONFIGURED" → "/content/models/research/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained_model/efficientdet_d0_coco17_tpu-32/checkpoint/ckpt-0"
+167行目：fine_tune_checkpoint_type: "classification" → "detection"<br>
+168行目：use_bfloat16: true → false<br>
+172行目：label_map_path: "PATH_TO_BE_CONFIGURED/label_map.txt" → "/content/models/research/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/02_tfrecord/tf_label_map.pbtxt"<br>
+174行目：input_path: "PATH_TO_BE_CONFIGURED/train2017-?????-of-00256.tfrecord" → "/content/models/research/train_data/??????.tfrecord"<br>
+185行目：label_map_path: "PATH_TO_BE_CONFIGURED/label_map.txt" → "/content/models/research/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/02_tfrecord/tf_label_map.pbtxt"<br>
+189行目：input_path: "PATH_TO_BE_CONFIGURED/val2017-?????-of-00032.tfrecord" → "/content/models/research/val_data/??????.tfrecord"
+-->
 
 # Author
 高橋かずひと(https://twitter.com/KzhtTkhs)
