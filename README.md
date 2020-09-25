@@ -8,7 +8,7 @@ VoTTでのアノテーションをローカルPCで実施し、学習～推論�
 * Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確認)
 
 <details>
-<summary>ディレクトリ構成 ※クリックで開く</summary>
+<summary>ディレクトリ構成</summary>
 
 <pre>
 │ [Colaboratory]Tensorflow2_ObjectDetectionAPI_Colab_Hands_On.ipynb
@@ -69,7 +69,7 @@ Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確�
 [VoTT](https://github.com/microsoft/VoTT)を使用してアノテーションを行い、TFRecord形式で出力します。
 
 <details>
-<summary>VoTTのプロジェクト設定 ※クリックで開く</summary>
+<summary>VoTTのプロジェクト設定</summary>
 	
 #### 「新規プロジェクト」を選択する
 ![2020-09-19 (3)](https://user-images.githubusercontent.com/37477845/94047557-38407600-fe0d-11ea-8d10-041a27546e85.png)
@@ -101,7 +101,7 @@ Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確�
 </details>
 
 <details>
-<summary>VoTTを使用してアノテーションを実施 ※クリックで開く</summary>
+<summary>VoTTを使用してアノテーションを実施</summary>
 	
 #### マウス左ドラッグで魚を選択する
 ![2020-09-19 (13)](https://user-images.githubusercontent.com/37477845/94047578-3e365700-fe0d-11ea-86b9-2d88ef24d0c0.png)
@@ -113,7 +113,7 @@ Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確�
 </details>
 
 <details>
-<summary>TFRecordエクスポート ※クリックで開く</summary>
+<summary>TFRecordエクスポート</summary>
 	
 #### エクスポート設定
 プロバイダー：Tensorflow レコード<br>
@@ -125,11 +125,12 @@ Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確�
 </details>
 
 <details>
-<summary>注意事項 ※クリックで開く</summary>
-	
-#### 14
-![2020-09-19 (17)](https://user-images.githubusercontent.com/37477845/94047603-44c4ce80-fe0d-11ea-8c0d-3ebc2e740560.png)
-#### 15
+<summary>注意事項（詳細確認中）</summary>
+
+画像の端の対象をアノテーションする際に、以下のように端から少し隙間を設けてください。
+![2020-09-19 (17)](https://user-images.githubusercontent.com/37477845/94047603-44c4ce80-fe0d-11ea-8c0d-3ebc2e740560.png)<br>
+問題の詳細は確認中ですが、隙間を開けずに端までくっつけてアノテーションをすると、<br>
+VoTTの問題かTensorflowの問題か、モデル学習時に以下のエラーが発生します。
 <pre>
 W0921 13:29:32.965700 140050120722176 optimizer_v2.py:1275] Gradients do not exist for variables ['top_bn/gamma:0', 'top_bn/beta:0'] when minimizing the loss.
 Traceback (most recent call last):
