@@ -1,3 +1,4 @@
+[Japanese/[English](https://github.com/Kazuhito00/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/blob/master/README_EN.md)] 
 # Tensorflow2-ObjectDetectionAPI-Colab-Hands-On
 Tensorflow2 Object Detection APIのハンズオン用資料です。<br>
 VoTTでのアノテーションをローカルPCで実施し、学習～推論はColaboratory上で実施します。<br><br>
