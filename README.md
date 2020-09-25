@@ -233,7 +233,7 @@ Colaboratory上の「Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained
 以下の順に実行してください。
 * Googleドライブに保存先ディレクトリを作成
 * TensorBoard
-* 学習(Training)
+* 学習
 * saved model形式へエクスポート
 
 # 6. Colaboratory：推論
