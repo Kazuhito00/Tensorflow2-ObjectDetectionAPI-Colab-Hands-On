@@ -182,9 +182,13 @@ tensorflow.python.framework.errors_impl.InvalidArgumentError: 2 root error(s) fo
 * Google Driveマウント
 * Tensorflow Object Detection API設定
 * Tensorflow2-ObjectDetectionAPI-Colab-Hands-Onリポジトリクローン
+
+# 3.TFRecordアップロード
+「Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/02_tfrecord」にVoTTからエクスポートしたTFRecordとtf_label_map.pbtxtを格納してください。
+格納後、以下を実行してください。
 * 学習データ/検証データ 分割
 
-# 3. パイプラインコンフィグ修正
+# 4. パイプラインコンフィグ修正
 「03_pretrained_model\efficientdet_d0_coco17_tpu-32\pipeline.config」のパイプラインコンフィグを以下のように修正して、<br>
 Colaboratory上の「Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained_model」にアップロードしてください。<br>
 <details>
@@ -201,14 +205,14 @@ Colaboratory上の「Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained
 * 189行目(Line 189)：バリデーションデータの格納先(input_path)<br>変更前(Before) : "PATH_TO_BE_CONFIGURED/val2017-?????-of-00032.tfrecord"<br>変更後(After) : "/content/models/research/val_data/??????.tfrecord"
 </details>
 
-# 4. Colaboratory：モデル訓練
+# 5. Colaboratory：モデル訓練
 以下の順に実行してください。
 * Googleドライブに保存先ディレクトリを作成
 * TensorBoard
 * 学習(Training)
 * saved model形式へエクスポート
 
-# 5. Colaboratory：推論
+# 6. Colaboratory：推論
 以下の順に実行してください。
 * モデルロード
 * 推論
