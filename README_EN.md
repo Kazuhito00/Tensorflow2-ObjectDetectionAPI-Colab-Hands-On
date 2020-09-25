@@ -178,22 +178,22 @@ tensorflow.python.framework.errors_impl.InvalidArgumentError: 2 root error(s) fo
 
 # 2. Colaboratory：Object Detection API Setting
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Kazuhito00/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/blob/master/[Colaboratory]Tensorflow2-ObjectDetectionAPI-Colab-Hands-On.ipynb)<br>
-以降の作業はGoogle Colaboratory上で実施します。※パイプラインコンフィグ修正をのぞく<br>
-[Open In Colab]リンクからノートブックを開き、以下の順に実行してください。
-* Google Driveマウント
-* Tensorflow Object Detection API設定
-* Tensorflow2-ObjectDetectionAPI-Colab-Hands-Onリポジトリクローン
+Subsequent work will be performed on Google Colaboratory. ※Except for pipeline config modification<br>
+Open your notebook from the [Open In Colab] link and run it in the following order.
+* Google Drive mount
+* Set Tensorflow Object Detection API
+* Clone Tensorflow2-ObjectDetectionAPI-Colab-Hands-On repository
 
-# 3.TFRecordアップロード
-「Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/02_tfrecord」に<br>VoTTからエクスポートしたTFRecordとtf_label_map.pbtxtを格納してください。<br>
-格納後、以下を実行してください。
-* 学習データ/検証データ 分割
+# 3.Upload TFRecord
+Store the TFRecord exported from VoTT and tf_label_map.pbtxt in "Tensorflow2-Object Detection API-Colab-Hands-On / 02_tfrecord".<br>
+After storing, execute the following.
+* Split Training data/validation data
 
-# 4. パイプラインコンフィグ修正
-「03_pretrained_model\efficientdet_d0_coco17_tpu-32\pipeline.config」のパイプラインコンフィグを以下のように修正して、<br>
-Colaboratory上の「Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained_model」にアップロードしてください。<br>
+# 4. Pipeline-config correction
+Modify the pipeline config of "03_pretrained_model/coefficientdet_d0_coco17_tpu-32/pipeline.config" as follows, <br>
+Please upload to "Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained_model" on Colaboratory.<br>
 <details>
-<summary>パイプラインコンフィグ修正箇所</summary>
+<summary>Pipeline-config correction part</summary>
 
 * 3行目(Line 3)：クラス数(num_classes)<br>変更前(Before) : 90<br>変更後(After) : 1<br>
 * 134行目(Line 134)：バッチサイズ(batch_size)<br>変更前(Before) : 128<br>変更後(After) : 16<br>
@@ -207,10 +207,10 @@ Colaboratory上の「Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained
 </details>
 
 <details>
-<summary>パイプラインコンフィグ修正箇所 ※余裕のある方向け</summary>
+<summary>Pipeline-config correction parts ※Those who can afford</summary>
 
-パイプラインコンフィグにはデータ拡張設定も記載されています。<br>
-初期のパイプラインコンフィグには、以下の水平反転、ランダムスケールクロップのみのデータ拡張が設定されています。<br>
+Data Augmentation settings are also listed in the pipeline config.<br>
+In the initial pipeline config, the following horizontal inversion and random scale crop only data augmentation are set.<br>
 <pre>
   data_augmentation_options {
     random_horizontal_flip {
@@ -225,22 +225,22 @@ Colaboratory上の「Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained
   }
 </pre>
 
-使用可能なデータ拡張手法は、[preprocessor.proto](https://github.com/tensorflow/models/blob/master/research/object_detection/protos/preprocessor.proto)、[preprocessor.py](https://github.com/tensorflow/models/blob/master/research/object_detection/core/preprocessor.py)に記載されているため、<br>
-必要に応じて追加してみてください。
+Available data augmentation techniques are [preprocessor.proto](https://github.com/tensorflow/models/blob/master/research/object_detection/protos/preprocessor.proto)、[preprocessor.py](https://github.com/tensorflow/models/blob/master/research/object_detection/core/preprocessor.py)so <br>
+Try adding as needed.
 </details>
 
-# 5. Colaboratory：モデル訓練
-以下の順に実行してください。
-* Googleドライブに保存先ディレクトリを作成
+# 5. Colaboratory：Model training
+Please execute in the following order.
+* Create directory in Google Drive
 * TensorBoard
-* 学習(Training)
-* saved model形式へエクスポート
+* Training
+* Export to saved-model format
 
 # 6. Colaboratory：推論
-以下の順に実行してください。
-* モデルロード
-* 推論
-* 推論結果確認
+Please execute in the following order.
+* Load model
+* Inference
+* Inference result confirmation
 
 # Author
 高橋かずひと(https://twitter.com/KzhtTkhs)
