@@ -69,10 +69,12 @@ Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確�
 [VoTT](https://github.com/microsoft/VoTT)を使用してアノテーションを行い、TFRecord形式で出力します。
 
 <details open>
-<summary>VoTT</summary>
-
+<summary>VoTTを使用してアノテーションを実施する。</summary>
+#### XXXX
 ![2020-09-19 (3)](https://user-images.githubusercontent.com/37477845/94047557-38407600-fe0d-11ea-8d10-041a27546e85.png)
+#### XXXX
 ![2020-09-19 (4)](https://user-images.githubusercontent.com/37477845/94047561-3971a300-fe0d-11ea-8bd2-4bd621cd531c.png)
+#### XXXX
 ![2020-09-19 (6)](https://user-images.githubusercontent.com/37477845/94047562-3a0a3980-fe0d-11ea-8619-7dab9d63160b.png)
 ![2020-09-19 (7)](https://user-images.githubusercontent.com/37477845/94047564-3aa2d000-fe0d-11ea-9aea-b66aab732841.png)
 ![2020-09-19 (8)](https://user-images.githubusercontent.com/37477845/94047566-3b3b6680-fe0d-11ea-8534-8402652d9f32.png)
