@@ -176,25 +176,38 @@ tensorflow.python.framework.errors_impl.InvalidArgumentError: 2 root error(s) fo
 </details>
 
 # 2. Colaboratory：Object Detection API設定
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Kazuhito00/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/blob/master/[Colaboratory]Tensorflow2-ObjectDetectionAPI-Colab-Hands-On.ipynb)<br>
+以降の作業はGoogle Colaboratory上で実施します。※パイプラインコンフィグ修正をのぞき<br>
+* Google Driveマウント
+* Tensorflow Object Detection API設定
+* Tensorflow2-ObjectDetectionAPI-Colab-Hands-Onリポジトリクローン
+* 学習データ/検証データ 分割
 
 # 3. パイプラインコンフィグ修正
+パイプラインコンフィグを修正し「Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained_model」にアップロードしてください(Please modify the pipeline config and upload it to "Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained_model")<br><br>
+パイプラインコンフィグは以下の行を修正します(Pipeline Config modifies the following line)<br>
+
+* 3行目(Line 3)：クラス数(num_classes)<br>変更前(Before) : 90<br>変更後(After) : 1<br>
+* 134行目(Line 134)：バッチサイズ(batch_size)<br>変更前(Before) : 128<br>変更後(After) : 16<br>
+* 161行目(Line 161)：ファインチューニング用のチェックポイント格納先(fine_tune_checkpoint)<br>変更前(Before) : "PATH_TO_BE_CONFIGURED"<br>変更後(After) : "/content/models/research/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained_model/efficientdet_d0_coco17_tpu-32/checkpoint/ckpt-0"
+* 167行目(Line 167)：ファインチューニング方法(fine_tune_checkpoint_type)<br>変更前(Before) : "classification"<br>変更後(After) : "detection"<br>
+* 168行目(Line 168)：Googleカスタム 16ビットbrain浮動小数点の使用有無(use_bfloat16)<br>変更前(Before) : true<br>変更後(After) : false<br>
+* 172行目(Line 172)：ラベルマップファイルの格納先(label_map_path)<br>変更前(Before) : "PATH_TO_BE_CONFIGURED/label_map.txt"<br>変更後(After) : "/content/models/research/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/02_tfrecord/tf_label_map.pbtxt"<br>
+* 174行目(Line 174)：学習データの格納先(input_path)<br>変更前(Before) : "PATH_TO_BE_CONFIGURED/train2017-?????-of-00256.tfrecord"<br>変更後(After) : "/content/models/research/train_data/??????.tfrecord"<br>
+* 185行目(Line 185)：ラベルマップファイルの格納先(label_map_path)<br>変更前(Before) : "PATH_TO_BE_CONFIGURED/label_map.txt"<br>変更後(After) : "/content/models/research/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/02_tfrecord/tf_label_map.pbtxt"<br>
+* 189行目(Line 189)：バリデーションデータの格納先(input_path)<br>変更前(Before) : "PATH_TO_BE_CONFIGURED/val2017-?????-of-00032.tfrecord"<br>変更後(After) : "/content/models/research/val_data/??????.tfrecord"
+<br><br>
 
 # 4. Colaboratory：モデル訓練
+* Googleドライブに保存先ディレクトリを作成
+* TensorBoard
+* 学習(Training)
+* saved model形式へエクスポート
 
 # 5. Colaboratory：推論
-
-<!--
-# パイプラインコンフィグ修正箇所
-3行目：num_classes: 90 → 1<br>
-134行目：batch_size: 128 → 16<br>
-161行目：fine_tune_checkpoint: "PATH_TO_BE_CONFIGURED" → "/content/models/research/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained_model/efficientdet_d0_coco17_tpu-32/checkpoint/ckpt-0"
-167行目：fine_tune_checkpoint_type: "classification" → "detection"<br>
-168行目：use_bfloat16: true → false<br>
-172行目：label_map_path: "PATH_TO_BE_CONFIGURED/label_map.txt" → "/content/models/research/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/02_tfrecord/tf_label_map.pbtxt"<br>
-174行目：input_path: "PATH_TO_BE_CONFIGURED/train2017-?????-of-00256.tfrecord" → "/content/models/research/train_data/??????.tfrecord"<br>
-185行目：label_map_path: "PATH_TO_BE_CONFIGURED/label_map.txt" → "/content/models/research/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/02_tfrecord/tf_label_map.pbtxt"<br>
-189行目：input_path: "PATH_TO_BE_CONFIGURED/val2017-?????-of-00032.tfrecord" → "/content/models/research/val_data/??????.tfrecord"
--->
+* モデルロード
+* 推論
+* 推論結果確認
 
 # Author
 高橋かずひと(https://twitter.com/KzhtTkhs)
