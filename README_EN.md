@@ -248,4 +248,4 @@ Please execute in the following order.
 高橋かずひと(https://twitter.com/KzhtTkhs)
  
 # License 
-FingerFrameDetection-TF2 is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+Tensorflow2-ObjectDetectionAPI-Colab-Hands-On is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
