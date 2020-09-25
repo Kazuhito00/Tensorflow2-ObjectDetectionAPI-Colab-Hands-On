@@ -129,7 +129,7 @@ Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確�
 
 画像の端の対象をアノテーションする際に、以下のように端から少し隙間を設けてください。
 ![2020-09-19 (17)](https://user-images.githubusercontent.com/37477845/94047603-44c4ce80-fe0d-11ea-8c0d-3ebc2e740560.png)<br>
-問題の詳細は確認中ですが、隙間を開けずに端までくっつけてアノテーションをすると、<br>
+問題の詳細は確認中ですが、隙間を開けずにアノテーションをすると、<br>
 VoTTの問題かTensorflowの問題か、モデル学習時に以下のエラーが発生します。
 <pre>
 W0921 13:29:32.965700 140050120722176 optimizer_v2.py:1275] Gradients do not exist for variables ['top_bn/gamma:0', 'top_bn/beta:0'] when minimizing the loss.
