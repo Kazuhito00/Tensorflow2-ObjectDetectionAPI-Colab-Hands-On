@@ -116,7 +116,7 @@ You can lock the tag you want to use by selecting the padlock mark.
 <details>
 <summary>TFRecord export</summary>
 	
-#### エクスポート設定
+#### Export settings
 Provider：Tensorflow record<br>
 Asset status: Tagged assets only<br>
 Click "Save Export Settings"
@@ -236,7 +236,7 @@ Please execute in the following order.
 * Training
 * Export to saved-model format
 
-# 6. Colaboratory：推論
+# 6. Colaboratory：Inference
 Please execute in the following order.
 * Load model
 * Inference
