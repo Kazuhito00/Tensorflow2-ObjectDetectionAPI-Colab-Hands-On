@@ -8,7 +8,7 @@ VoTTでのアノテーションをローカルPCで実施し、学習～推論�
 * Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確認)
 
 <details>
-<summary>ディレクトリ構成</summary>
+<summary>ディレクトリ構成 ※クリックで開く</summary>
 
 <pre>
 │ [Colaboratory]Tensorflow2_ObjectDetectionAPI_Colab_Hands_On.ipynb
@@ -69,37 +69,64 @@ Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確�
 [VoTT](https://github.com/microsoft/VoTT)を使用してアノテーションを行い、TFRecord形式で出力します。
 
 <details>
-<summary>VoTTを使用してアノテーションを実施する手順</summary>
+<summary>VoTTのプロジェクト設定 ※クリックで開く</summary>
 	
-#### 「新規プロジェクト」を選択する。
+#### 「新規プロジェクト」を選択する
 ![2020-09-19 (3)](https://user-images.githubusercontent.com/37477845/94047557-38407600-fe0d-11ea-8d10-041a27546e85.png)
-#### プロジェクト設定を行う。
+#### プロジェクト設定を行う
 表示名：Tensorflow2-ObjectDetectionAPI-Colab-Hands-On<br>
 セキュリティトークン：Generate New Security Token<br>
 ソース接続：「Add Connection」を押下<br>
 ![2020-09-19 (4)](https://user-images.githubusercontent.com/37477845/94047561-3971a300-fe0d-11ea-8bd2-4bd621cd531c.png)
-#### 3
+#### ソース接続の接続設定を行う
+表示名：Tensorflow2-ObjectDetectionAPI-Colab-Hands-On-TrainData
 ![2020-09-19 (6)](https://user-images.githubusercontent.com/37477845/94047562-3a0a3980-fe0d-11ea-8619-7dab9d63160b.png)
-#### 4
+プロバイダー：ローカルファイルシステム
 ![2020-09-19 (7)](https://user-images.githubusercontent.com/37477845/94047564-3aa2d000-fe0d-11ea-9aea-b66aab732841.png)
-#### 5
+フォルダーパス：クローンしたリポジトリの「01_train_data」ディレクトリを指定
 ![2020-09-19 (8)](https://user-images.githubusercontent.com/37477845/94047566-3b3b6680-fe0d-11ea-8534-8402652d9f32.png)
-#### 6
+#### ターゲット接続の接続設定を行う
+ターゲット接続：Add Connection
 ![2020-09-19 (9)](https://user-images.githubusercontent.com/37477845/94047569-3bd3fd00-fe0d-11ea-958d-745d86d3436f.png)
-#### 7
+表示名：Tensorflow2-ObjectDetectionAPI-Colab-Hands-On-TFRecord<br>
+プロバイダー：ローカルファイルシステム<br>
+フォルダーパス：クローンしたリポジトリの「02_tfrecord」ディレクトリを指定<br>
 ![2020-09-19 (10)](https://user-images.githubusercontent.com/37477845/94047571-3c6c9380-fe0d-11ea-94fb-94a4a4dd4467.png)
-#### 8
-![2020-09-19 (11)](https://user-images.githubusercontent.com/37477845/94047572-3d052a00-fe0d-11ea-80cb-e6b2f39fbfc9.png)
-#### 9
+<!-- #### 8
+![2020-09-19 (11)](https://user-images.githubusercontent.com/37477845/94047572-3d052a00-fe0d-11ea-80cb-e6b2f39fbfc9.png)-->
+#### タグを追加し設定を保存する
+タグ：「Fish」を追加<br>
+「プロジェクトを保存」を押下
 ![94047577-3d9dc080-fe0d-11ea-9f4f-b5fe7727fc12](https://user-images.githubusercontent.com/37477845/94283906-98a9f180-ff8c-11ea-9e16-a546b26ba763.png)
-#### 10
+</details>
+
+<details>
+<summary>VoTTを使用してアノテーションを実施 ※クリックで開く</summary>
+	
+#### マウス左ドラッグで魚を選択する
 ![2020-09-19 (13)](https://user-images.githubusercontent.com/37477845/94047578-3e365700-fe0d-11ea-86b9-2d88ef24d0c0.png)
-#### 11
+#### TAGSから「Fish」を選択する
+南京錠のマークを選択しておくことでタグを使用するタグを固定することが可能
 ![2020-09-19 (14)](https://user-images.githubusercontent.com/37477845/94047588-41314780-fe0d-11ea-9574-0cb6c77f8be5.png)
-#### 12
-![2020-09-19 (15)](https://user-images.githubusercontent.com/37477845/94047598-442c3800-fe0d-11ea-9285-d72713520a65.png)
-#### 13
+<!-- #### 12
+![2020-09-19 (15)](https://user-images.githubusercontent.com/37477845/94047598-442c3800-fe0d-11ea-9285-d72713520a65.png)-->
+</details>
+
+<details>
+<summary>TFRecordエクスポート ※クリックで開く</summary>
+	
+#### エクスポート設定
+プロバイダー：Tensorflow レコード<br>
+アセットの状態：タグ付きアセットのみ<br>
+「エクスポート設定を保存」を押下する
 ![2020-09-19 (16)](https://user-images.githubusercontent.com/37477845/94047601-44c4ce80-fe0d-11ea-89fc-92b86e4ba3b8.png)
+アノテーション画面からエクスポートマークを押下し、TFRecordをエクスポートする。
+![2020-09-19 (14)](https://user-images.githubusercontent.com/37477845/94047588-41314780-fe0d-11ea-9574-0cb6c77f8be5.png)
+</details>
+
+<details>
+<summary>注意事項 ※クリックで開く</summary>
+	
 #### 14
 ![2020-09-19 (17)](https://user-images.githubusercontent.com/37477845/94047603-44c4ce80-fe0d-11ea-8c0d-3ebc2e740560.png)
 #### 15
