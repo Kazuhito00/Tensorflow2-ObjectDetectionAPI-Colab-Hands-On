@@ -209,9 +209,7 @@ Colaboratory上の「Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained
 <summary>パイプラインコンフィグ修正箇所 ※余裕のある方向け</summary>
 
 パイプラインコンフィグにはデータ拡張設定も記載されています。<br>
-初期のパイプラインコンフィグには、水平反転、ランダムスケールクロップのみのデータ拡張が設定されています。<br>
-使用可能なデータ拡張手法は、[preprocessor.proto](https://github.com/tensorflow/models/blob/master/research/object_detection/protos/preprocessor.proto)、[preprocessor.py](https://github.com/tensorflow/models/blob/master/research/object_detection/core/preprocessor.py)に記載されているため、<br>
-必要に応じて追加してみてください。
+初期のパイプラインコンフィグには、以下の水平反転、ランダムスケールクロップのみのデータ拡張が設定されています。<br>
 <pre>
   data_augmentation_options {
     random_horizontal_flip {
@@ -225,6 +223,9 @@ Colaboratory上の「Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained
     }
   }
 </pre>
+
+使用可能なデータ拡張手法は、[preprocessor.proto](https://github.com/tensorflow/models/blob/master/research/object_detection/protos/preprocessor.proto)、[preprocessor.py](https://github.com/tensorflow/models/blob/master/research/object_detection/core/preprocessor.py)に記載されているため、<br>
+必要に応じて追加してみてください。
 </details>
 
 # 5. Colaboratory：モデル訓練
