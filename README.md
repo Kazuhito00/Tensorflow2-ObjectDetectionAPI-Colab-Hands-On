@@ -205,6 +205,28 @@ Colaboratory上の「Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained
 * 189行目(Line 189)：バリデーションデータの格納先(input_path)<br>変更前(Before) : "PATH_TO_BE_CONFIGURED/val2017-?????-of-00032.tfrecord"<br>変更後(After) : "/content/models/research/val_data/??????.tfrecord"
 </details>
 
+<details>
+<summary>パイプラインコンフィグ修正箇所 ※余裕のある方向け</summary>
+
+パイプラインコンフィグにはデータ拡張設定も記載されています。<br>
+初期のパイプラインコンフィグには、水平反転、ランダムスケールクロップのみのデータ拡張が設定されています。<br>
+使用可能なデータ拡張手法は、[preprocessor.proto](https://github.com/tensorflow/models/blob/master/research/object_detection/protos/preprocessor.proto)、[preprocessor.py](https://github.com/tensorflow/models/blob/master/research/object_detection/core/preprocessor.py)に記載されているため、<br>
+必要に応じて追加してみてください。
+<pre>
+  data_augmentation_options {
+    random_horizontal_flip {
+    }
+  }
+  data_augmentation_options {
+    random_scale_crop_and_pad_to_square {
+      output_size: 512
+      scale_min: 0.10000000149011612
+      scale_max: 2.0
+    }
+  }
+</pre>
+</details>
+
 # 5. Colaboratory：モデル訓練
 以下の順に実行してください。
 * Googleドライブに保存先ディレクトリを作成
