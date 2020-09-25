@@ -71,35 +71,35 @@ Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確�
 <details open>
 <summary>VoTTを使用してアノテーションを実施する。</summary>
 	
-#### XXXX
+#### 1
 ![2020-09-19 (3)](https://user-images.githubusercontent.com/37477845/94047557-38407600-fe0d-11ea-8d10-041a27546e85.png)
-#### XXXX
+#### 2
 ![2020-09-19 (4)](https://user-images.githubusercontent.com/37477845/94047561-3971a300-fe0d-11ea-8bd2-4bd621cd531c.png)
-#### XXXX
+#### 3
 ![2020-09-19 (6)](https://user-images.githubusercontent.com/37477845/94047562-3a0a3980-fe0d-11ea-8619-7dab9d63160b.png)
-#### XXXX
+#### 4
 ![2020-09-19 (7)](https://user-images.githubusercontent.com/37477845/94047564-3aa2d000-fe0d-11ea-9aea-b66aab732841.png)
-#### XXXX
+#### 5
 ![2020-09-19 (8)](https://user-images.githubusercontent.com/37477845/94047566-3b3b6680-fe0d-11ea-8534-8402652d9f32.png)
-#### XXXX
+#### 6
 ![2020-09-19 (9)](https://user-images.githubusercontent.com/37477845/94047569-3bd3fd00-fe0d-11ea-958d-745d86d3436f.png)
-#### XXXX
+#### 7
 ![2020-09-19 (10)](https://user-images.githubusercontent.com/37477845/94047571-3c6c9380-fe0d-11ea-94fb-94a4a4dd4467.png)
-#### XXXX
+#### 8
 ![2020-09-19 (11)](https://user-images.githubusercontent.com/37477845/94047572-3d052a00-fe0d-11ea-80cb-e6b2f39fbfc9.png)
-#### XXXX
-![2020-09-19 (12)](https://user-images.githubusercontent.com/37477845/94047577-3d9dc080-fe0d-11ea-9f4f-b5fe7727fc12.png)
-#### XXXX
+#### 9
+![94047577-3d9dc080-fe0d-11ea-9f4f-b5fe7727fc12](https://user-images.githubusercontent.com/37477845/94283906-98a9f180-ff8c-11ea-9e16-a546b26ba763.png)
+#### 10
 ![2020-09-19 (13)](https://user-images.githubusercontent.com/37477845/94047578-3e365700-fe0d-11ea-86b9-2d88ef24d0c0.png)
-#### XXXX
+#### 11
 ![2020-09-19 (14)](https://user-images.githubusercontent.com/37477845/94047588-41314780-fe0d-11ea-9574-0cb6c77f8be5.png)
-#### XXXX
+#### 12
 ![2020-09-19 (15)](https://user-images.githubusercontent.com/37477845/94047598-442c3800-fe0d-11ea-9285-d72713520a65.png)
-#### XXXX
+#### 13
 ![2020-09-19 (16)](https://user-images.githubusercontent.com/37477845/94047601-44c4ce80-fe0d-11ea-89fc-92b86e4ba3b8.png)
-#### XXXX
+#### 14
 ![2020-09-19 (17)](https://user-images.githubusercontent.com/37477845/94047603-44c4ce80-fe0d-11ea-8c0d-3ebc2e740560.png)
-#### XXXX
+#### 15
 <pre>
 W0921 13:29:32.965700 140050120722176 optimizer_v2.py:1275] Gradients do not exist for variables ['top_bn/gamma:0', 'top_bn/beta:0'] when minimizing the loss.
 Traceback (most recent call last):
