@@ -184,7 +184,7 @@ tensorflow.python.framework.errors_impl.InvalidArgumentError: 2 root error(s) fo
 * Tensorflow2-ObjectDetectionAPI-Colab-Hands-Onリポジトリクローン
 
 # 3.TFRecordアップロード
-「Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/02_tfrecord」にVoTTからエクスポートしたTFRecordとtf_label_map.pbtxtを格納してください。
+「Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/02_tfrecord」に<br>VoTTからエクスポートしたTFRecordとtf_label_map.pbtxtを格納してください。<br>
 格納後、以下を実行してください。
 * 学習データ/検証データ 分割
 
