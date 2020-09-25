@@ -177,15 +177,16 @@ tensorflow.python.framework.errors_impl.InvalidArgumentError: 2 root error(s) fo
 
 # 2. Colaboratory：Object Detection API設定
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Kazuhito00/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/blob/master/[Colaboratory]Tensorflow2-ObjectDetectionAPI-Colab-Hands-On.ipynb)<br>
-以降の作業はGoogle Colaboratory上で実施します。※パイプラインコンフィグ修正をのぞき<br>
+以降の作業はGoogle Colaboratory上で実施します。※パイプラインコンフィグ修正をのぞく<br>
+[Open In Colab]リンクからノートブックを開き、以下の順に実行してください。
 * Google Driveマウント
 * Tensorflow Object Detection API設定
 * Tensorflow2-ObjectDetectionAPI-Colab-Hands-Onリポジトリクローン
 * 学習データ/検証データ 分割
 
 # 3. パイプラインコンフィグ修正
-パイプラインコンフィグを修正し「Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained_model」にアップロードしてください(Please modify the pipeline config and upload it to "Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained_model")<br><br>
-パイプラインコンフィグは以下の行を修正します(Pipeline Config modifies the following line)<br>
+「03_pretrained_model\efficientdet_d0_coco17_tpu-32\pipeline.config」のパイプラインコンフィグを以下のように修正して、<br>
+Colaboratory上の「Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained_model」にアップロードしてください。<br><br>
 
 * 3行目(Line 3)：クラス数(num_classes)<br>変更前(Before) : 90<br>変更後(After) : 1<br>
 * 134行目(Line 134)：バッチサイズ(batch_size)<br>変更前(Before) : 128<br>変更後(After) : 16<br>
