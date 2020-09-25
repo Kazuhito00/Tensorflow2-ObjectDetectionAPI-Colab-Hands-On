@@ -53,85 +53,85 @@ Test dataset
 
 
 # Overview
-2時間程度のボリュームの想定です。
-1. VoTT：アノテーション(約30～60分)
-1. Colaboratory：Object Detection API設定
-1. パイプラインコンフィグ修正
-1. Colaboratory：モデル訓練(約25分)
-1. Colaboratory：推論
+This hands-on assumes about 2 hours.
+1. VoTT：Annotation(30～60minutes)
+1. Colaboratory：Object Detection API Setting
+1. Pipeline-config correction
+1. Colaboratory：Model training(About 25minutes)
+1. Colaboratory：Inference
 
 # Preparations
-事前準備として以下が必要です。
-* このリポジトリのローカル環境へのクローン
-* [VoTT](https://github.com/microsoft/VoTT)のインストール
-* Googleアカウント(Google Colaboratory、Googleドライブで使用)
+The following is required as a preliminary preparation.
+* Clone this repository to your local PC.
+* [VoTT](https://github.com/microsoft/VoTT) installation.
+* Google account(Used in Google Drive, Google Colaboratory)
 
-# 1. VoTT：アノテーション
-[VoTT](https://github.com/microsoft/VoTT)を使用してアノテーションを行い、TFRecord形式で出力します。
+# 1. VoTT：Annotation
+Annotate using [VoTT](https://github.com/microsoft/VoTT) and output in TFRecord format.
 
 <details>
-<summary>VoTTのプロジェクト設定</summary>
+<summary>VoTT project settings</summary>
 	
-#### 「新規プロジェクト」を選択する
+#### Select "New Project"
 ![2020-09-19 (3)](https://user-images.githubusercontent.com/37477845/94047557-38407600-fe0d-11ea-8d10-041a27546e85.png)
-#### プロジェクト設定を行う
-表示名：Tensorflow2-ObjectDetectionAPI-Colab-Hands-On<br>
-セキュリティトークン：Generate New Security Token<br>
-ソース接続：「Add Connection」を押下<br>
+#### Make project settings
+Display name：Tensorflow2-ObjectDetectionAPI-Colab-Hands-On<br>
+Security token：Generate New Security Token<br>
+Source connection：「Add Connection」を押下<br>
 ![2020-09-19 (4)](https://user-images.githubusercontent.com/37477845/94047561-3971a300-fe0d-11ea-8bd2-4bd621cd531c.png)
-#### ソース接続の接続設定を行う
-表示名：Tensorflow2-ObjectDetectionAPI-Colab-Hands-On-TrainData
+#### Set the connection of the source connection
+Display name：Tensorflow2-ObjectDetectionAPI-Colab-Hands-On-TrainData
 ![2020-09-19 (6)](https://user-images.githubusercontent.com/37477845/94047562-3a0a3980-fe0d-11ea-8619-7dab9d63160b.png)
-プロバイダー：ローカルファイルシステム
+Provider: Local file system
 ![2020-09-19 (7)](https://user-images.githubusercontent.com/37477845/94047564-3aa2d000-fe0d-11ea-9aea-b66aab732841.png)
-フォルダーパス：クローンしたリポジトリの「01_train_data」ディレクトリを指定
+Folder path：Specify the "01_train_data" directory of the cloned repository
 ![2020-09-19 (8)](https://user-images.githubusercontent.com/37477845/94047566-3b3b6680-fe0d-11ea-8534-8402652d9f32.png)
-#### ターゲット接続の接続設定を行う
-ターゲット接続：Add Connection
+#### Set the connection of the target connection
+Target connection：Add Connection
 ![2020-09-19 (9)](https://user-images.githubusercontent.com/37477845/94047569-3bd3fd00-fe0d-11ea-958d-745d86d3436f.png)
-表示名：Tensorflow2-ObjectDetectionAPI-Colab-Hands-On-TFRecord<br>
-プロバイダー：ローカルファイルシステム<br>
-フォルダーパス：クローンしたリポジトリの「02_tfrecord」ディレクトリを指定<br>
+Display name：Tensorflow2-ObjectDetectionAPI-Colab-Hands-On-TFRecord<br>
+Provider: Local file system<br>
+Folder path：Specify the "02_tfrecord" directory of the cloned repository<br>
 ![2020-09-19 (10)](https://user-images.githubusercontent.com/37477845/94047571-3c6c9380-fe0d-11ea-94fb-94a4a4dd4467.png)
 <!-- #### 8
 ![2020-09-19 (11)](https://user-images.githubusercontent.com/37477845/94047572-3d052a00-fe0d-11ea-80cb-e6b2f39fbfc9.png)-->
-#### タグを追加し設定を保存する
-タグ：「Fish」を追加<br>
-「プロジェクトを保存」を押下
+#### Add tags and save settings
+Tags：Add "Fish"<br>
+Press "Save Project"
 ![94047577-3d9dc080-fe0d-11ea-9f4f-b5fe7727fc12](https://user-images.githubusercontent.com/37477845/94283906-98a9f180-ff8c-11ea-9e16-a546b26ba763.png)
 </details>
 
 <details>
-<summary>VoTTを使用してアノテーションを実施</summary>
+<summary>Annotate using VoTT</summary>
 	
-#### マウス左ドラッグで魚を選択する
+#### Select a fish by left dragging the mouse
 ![2020-09-19 (13)](https://user-images.githubusercontent.com/37477845/94047578-3e365700-fe0d-11ea-86b9-2d88ef24d0c0.png)
-#### TAGSから「Fish」を選択する
-南京錠のマークを選択しておくことでタグを使用するタグを固定することが可能
+#### Select "Fish" from TAGS
+You can lock the tag you want to use by selecting the padlock mark.
 ![2020-09-19 (14)](https://user-images.githubusercontent.com/37477845/94047588-41314780-fe0d-11ea-9574-0cb6c77f8be5.png)
 <!-- #### 12
 ![2020-09-19 (15)](https://user-images.githubusercontent.com/37477845/94047598-442c3800-fe0d-11ea-9285-d72713520a65.png)-->
 </details>
 
 <details>
-<summary>TFRecordエクスポート</summary>
+<summary>TFRecord export</summary>
 	
 #### エクスポート設定
-プロバイダー：Tensorflow レコード<br>
-アセットの状態：タグ付きアセットのみ<br>
-「エクスポート設定を保存」を押下する
+Provider：Tensorflow record<br>
+Asset status: Tagged assets only<br>
+Click "Save Export Settings"
 ![2020-09-19 (16)](https://user-images.githubusercontent.com/37477845/94047601-44c4ce80-fe0d-11ea-89fc-92b86e4ba3b8.png)
-アノテーション画面からエクスポートマークを押下し、TFRecordをエクスポートする。
+Click the export icon from the annotation screen to export TFRecord.
 ![2020-09-19 (14)](https://user-images.githubusercontent.com/37477845/94047588-41314780-fe0d-11ea-9574-0cb6c77f8be5.png)
 </details>
 
 <details>
-<summary>注意事項（詳細確認中）</summary>
+<summary>Precautions (details are being confirmed)</summary>
 
-画像の端の対象をアノテーションする際に、以下のように端から少し隙間を設けてください。
+When annotating the target at the edge of the image, leave a small gap from the edge as shown below.
 ![2020-09-19 (17)](https://user-images.githubusercontent.com/37477845/94047603-44c4ce80-fe0d-11ea-8c0d-3ebc2e740560.png)<br>
-問題の詳細は確認中ですが、隙間を開けずにアノテーションをすると、<br>
-VoTTの問題かTensorflowの問題か、モデル学習時に以下のエラーが発生します。
+I am checking the details of the problem, but if I annotate without opening a gap, <br>
+I do not know whether it is a VoTT problem or a Tensorflow problem, but the following error occurs when training the model.
 <pre>
 W0921 13:29:32.965700 140050120722176 optimizer_v2.py:1275] Gradients do not exist for variables ['top_bn/gamma:0', 'top_bn/beta:0'] when minimizing the loss.
 Traceback (most recent call last):
@@ -176,7 +176,7 @@ tensorflow.python.framework.errors_impl.InvalidArgumentError: 2 root error(s) fo
 </pre>
 </details>
 
-# 2. Colaboratory：Object Detection API設定
+# 2. Colaboratory：Object Detection API Setting
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Kazuhito00/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/blob/master/[Colaboratory]Tensorflow2-ObjectDetectionAPI-Colab-Hands-On.ipynb)<br>
 以降の作業はGoogle Colaboratory上で実施します。※パイプラインコンフィグ修正をのぞく<br>
 [Open In Colab]リンクからノートブックを開き、以下の順に実行してください。
