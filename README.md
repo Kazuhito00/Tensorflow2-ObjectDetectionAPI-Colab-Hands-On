@@ -68,12 +68,15 @@ Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確�
 # 1. VoTT：アノテーション
 [VoTT](https://github.com/microsoft/VoTT)を使用してアノテーションを行い、TFRecord形式で出力します。
 
-<details open>
-<summary>VoTTを使用してアノテーションを実施する。</summary>
+<details>
+<summary>VoTTを使用してアノテーションを実施する手順</summary>
 	
-#### 1
+#### 「新規プロジェクト」を選択する。
 ![2020-09-19 (3)](https://user-images.githubusercontent.com/37477845/94047557-38407600-fe0d-11ea-8d10-041a27546e85.png)
-#### 2
+#### プロジェクト設定を行う。
+表示名：Tensorflow2-ObjectDetectionAPI-Colab-Hands-On<br>
+セキュリティトークン：Generate New Security Token<br>
+ソース接続：「Add Connection」を押下<br>
 ![2020-09-19 (4)](https://user-images.githubusercontent.com/37477845/94047561-3971a300-fe0d-11ea-8bd2-4bd621cd531c.png)
 #### 3
 ![2020-09-19 (6)](https://user-images.githubusercontent.com/37477845/94047562-3a0a3980-fe0d-11ea-8619-7dab9d63160b.png)
