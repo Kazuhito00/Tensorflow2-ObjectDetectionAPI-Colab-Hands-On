@@ -1,15 +1,15 @@
 [[Japanese](https://github.com/Kazuhito00/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On)/English] 
 # Tensorflow2-ObjectDetectionAPI-Colab-Hands-On
-Tensorflow2 Object Detection APIのハンズオン用資料です。<br>
-VoTTでのアノテーションをローカルPCで実施し、学習～推論はColaboratory上で実施します。<br><br>
-以下の内容を含みます。<br>
-* 学習用データセット ※アノテーション未実施
-* テスト用データセット
-* ファインチューニング用モデル(EffientDet D0)
-* Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確認)
+Hands-on documentation for the Tensorflow2 Object Detection API.<br>
+Annotation with VoTT is performed on the local PC, and learning ～ inference is performed on Colaboratory.<br><br>
+This repository contains the following:<br>
+* Dataset for learning (Annotation not implemented)
+* Test dataset
+* Model for fine-tuning(EffientDet D0)
+* Script for Google Colaboratory(Environment setting, model training, inference result confirmation)
 
 <details>
-<summary>ディレクトリ構成</summary>
+<summary>Directory structure</summary>
 
 <pre>
 │ [Colaboratory]Tensorflow2_ObjectDetectionAPI_Colab_Hands_On.ipynb
@@ -35,19 +35,19 @@ VoTTでのアノテーションをローカルPCで実施し、学習～推論�
 </pre>
 
 #### [Colaboratory]Tensorflow2_ObjectDetectionAPI_Colab_Hands_On.ipynb
-Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確認)
+Script for Google Colaboratory(Environment setting, model training, inference result confirmation)
 
 #### 01_train_data
-学習用データセット ※アノテーション未実施
+Dataset for learning (Annotation not implemented)
 
 #### 02_tfrecord
-アノテーション実施済みTFRecord格納先
+Annotated TFRecord storage location
 
 #### 03_pretrained_mode
-ファインチューニング用モデル(EffientDet D0)
+Model for fine-tuning(EffientDet D0)
 
 #### 04_test_data
-テスト用データセット
+Test dataset
 
 </details>
 
