@@ -61,12 +61,14 @@ Colaboratory用スクリプト(環境設定、モデル訓練、推論結果確�
 
 # Preparations
 事前準備として以下が必要です。
+* このリポジトリのローカル環境へのクローン
 * [VoTT](https://github.com/microsoft/VoTT)のインストール
 * Googleアカウント(Google Colaboratory、Googleドライブで使用)
 
 # 1. VoTT：アノテーション
+[VoTT](https://github.com/microsoft/VoTT)を使用してアノテーションを行い、TFRecord形式で出力します。
 
-<details>
+<details open>
 <summary>VoTT</summary>
 
 ![2020-09-19 (3)](https://user-images.githubusercontent.com/37477845/94047557-38407600-fe0d-11ea-8d10-041a27546e85.png)
