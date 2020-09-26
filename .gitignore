@@ -136,3 +136,6 @@ dmypy.json
 *-asset.json
 *.tfrecord
 tf_label_map.pbtxt
+
+# pipeline.config
+pipeline.config
