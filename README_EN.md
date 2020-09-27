@@ -3,7 +3,7 @@
 ![mkv4t-6ilnu](https://user-images.githubusercontent.com/37477845/94301550-b46dc180-ffa5-11ea-8a1c-7fdf14278cd9.gif)
 
 Hands-on documentation for the Tensorflow2 Object Detection API.<br>
-Annotation with VoTT is performed on the local PC, and learning ～ inference is performed on Colaboratory.<br><br>
+Annotation with VoTT is performed on the local PC, and learninginference is performed on Colaboratory.<br><br>
 This repository contains the following:<br>
 * Dataset for learning (Annotation not implemented)
 * Test dataset
