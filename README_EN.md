@@ -53,6 +53,8 @@ Test dataset
 
 </details>
 
+# Requirement
+Tensorflow 2.3.0
 
 # Overview
 This hands-on assumes about 2 hours.
