@@ -247,7 +247,7 @@ Please execute in the following order.
 * Inference result confirmation
 
 # Author
-高橋かずひと(https://twitter.com/KzhtTkhs)
+Kazuhito Takahashi(https://twitter.com/KzhtTkhs)
  
 # License 
 Tensorflow2-ObjectDetectionAPI-Colab-Hands-On is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
