@@ -58,7 +58,7 @@ Tensorflow 2.3.0
 
 # Overview
 This hands-on assumes about 2 hours.
-1. VoTT：Annotation(30～60minutes)
+1. VoTT：Annotation(30-60minutes)
 1. Colaboratory：Object Detection API Setting
 1. Pipeline-config correction
 1. Colaboratory：Model training(About 25minutes)
