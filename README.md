@@ -245,6 +245,9 @@ Colaboratory上の「Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/03_pretrained
 * モデルロード
 * 推論
 * 推論結果確認
+	
+# ToDo
+* [ ] pip依存関係解決のため、一時的に以下オプションを付与。<br>```!python -m pip install . --use-deprecated=legacy-resolver```<br>[tensorflow/models Issue #10375](https://github.com/tensorflow/models/issues/10375)、[Tensorflow2-ObjectDetectionAPI-Colab-Hands-On Issues #2](https://github.com/Kazuhito00/Tensorflow2-ObjectDetectionAPI-Colab-Hands-On/issues/2)
 
 # Author
 高橋かずひと(https://twitter.com/KzhtTkhs)
